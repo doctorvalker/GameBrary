@@ -1,0 +1,51 @@
+﻿<Window x:Class="GameBrary.EntCheck"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GameBrary"
+        mc:Ignorable="d"
+        Title="EntCheck" Height="720" Width="1280" WindowStartupLocation="CenterScreen" Icon="resources/Logo.png" ResizeMode = "NoResize" WindowStyle = "None">
+    <Grid MouseDown="MoveScreen">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="40*"/>
+            <RowDefinition Height="72*"/>
+            <RowDefinition Height="200*"/>
+            <RowDefinition Height="30*"/>
+            <RowDefinition Height="82*"/>
+            <RowDefinition Height="6*"/>
+            <RowDefinition Height="82*"/>
+            <RowDefinition Height="32*"/>
+            <RowDefinition Height="82*"/>
+            <RowDefinition Height="74*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="348*"/>
+            <ColumnDefinition Width="194*"/>
+            <ColumnDefinition Width="200*"/>
+            <ColumnDefinition Width="194*"/>
+            <ColumnDefinition Width="200*"/>
+            <ColumnDefinition Width="35*"/>
+            <ColumnDefinition Width="16*"/>
+            <ColumnDefinition Width="35*"/>
+            <ColumnDefinition Width="16*"/>
+            <ColumnDefinition Width="35*"/>
+            <ColumnDefinition Width="16*"/>
+        </Grid.ColumnDefinitions>
+        <Image Grid.ColumnSpan="11" Grid.RowSpan="11" Source="resources/Backgrounds/BackEnter.jpg"/>
+        <Image Grid.Column="2" Source="resources/Logo.png" Grid.Row="3"/>
+        <TextBox x:Name="Login" FontSize="50" Grid.ColumnSpan="3" Grid.Column="1" Grid.Row="5" Text="Логин" Style="{DynamicResource AllTBStyle}" GotFocus="LogClear" Foreground="LightGray" LostFocus="LogFill" PreviewTextInput="CheckInput"/>
+        <TextBox x:Name="Password" FontSize="50" Grid.ColumnSpan="3" Grid.Column="1" Grid.Row="7" Text="Пароль" Style="{DynamicResource AllTBStyle}" GotFocus="PasClear" Foreground="LightGray" LostFocus="PasFill" PreviewTextInput="CheckInput"/>
+        <Button x:Name="EntryMenu" Grid.ColumnSpan="3" Background="#4A799B" Grid.Column="1" Grid.Row="9"  Content="ВХОД" Style="{StaticResource EntRegButton}" Click="EntMenu"/>
+        <Button Click="HideWindow" ToolTip="Свернуть" Grid.Column="5" Grid.Row="1" Style="{DynamicResource HFCButton}" Margin="0,21,0,0">
+            <Image Source="resources/Button/HideOpen.png"/>
+        </Button>
+        <Button Click="WideWindow" ToolTip="Изменение размера" Grid.Column="7" Grid.Row="1" Style="{DynamicResource HFCButton}">
+            <Image Source="resources/Button/WideOpen.png"/>
+        </Button>
+        <Button Click="CloseApp" ToolTip="Закрыть" Grid.Column="9" Grid.Row="1" Style="{DynamicResource HFCButton}">
+            <Image Source="resources/Button/CloseWind.png"/>
+        </Button>
+    </Grid>
+</Window>

@@ -1,0 +1,48 @@
+﻿<Window x:Class="GameBrary.EntRegWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GameBrary"
+        mc:Ignorable="d"
+        Title="EntRegWindow" Height="720" Width="1280" WindowStartupLocation="CenterScreen" Icon="resources/Logo.png" ResizeMode = "NoResize" WindowStyle = "None">
+    <Grid MouseDown="MoveScreen">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="40*"/>
+            <RowDefinition Height="72*"/>
+            <RowDefinition Height="200*"/>
+            <RowDefinition Height="88*"/>
+            <RowDefinition Height="86*"/>
+            <RowDefinition Height="20*"/>
+            <RowDefinition Height="86*"/>
+            <RowDefinition Height="112*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="348*"/>
+            <ColumnDefinition Width="194*"/>
+            <ColumnDefinition Width="200*"/>
+            <ColumnDefinition Width="194*"/>
+            <ColumnDefinition Width="200*"/>
+            <ColumnDefinition Width="35*"/>
+            <ColumnDefinition Width="16*"/>
+            <ColumnDefinition Width="35*"/>
+            <ColumnDefinition Width="16*"/>
+            <ColumnDefinition Width="35*"/>
+            <ColumnDefinition Width="16*"/>
+        </Grid.ColumnDefinitions>
+        <Image Grid.ColumnSpan="11" Grid.RowSpan="9" Source="resources/Backgrounds/BackEnter.jpg"/>
+        <Button x:Name="EntryButton" Click ="EntryWin" Grid.ColumnSpan="3" Background="#4A799B" Grid.Column="1" Grid.Row="5"  Content="ВХОД" Style="{StaticResource EntRegButton}"/>
+        <Button x:Name="RegButton" Click="RegisWin" Grid.ColumnSpan="3" Background="#C3514A" Grid.Column="1" Grid.Row="7" Content="РЕГИСТРАЦИЯ" Style="{StaticResource EntRegButton}"/>
+        <Image Grid.Column="2" Source="resources/Logo.png" Grid.Row="3"/>
+        <Button Click="HideWindow" ToolTip="Свернуть" Grid.Column="5" Grid.Row="1" Style="{DynamicResource HFCButton}" Margin="0,21,0,0">
+            <Image Source="resources/Button/HideOpen.png"/>
+        </Button>
+        <Button Click="WideWindow" ToolTip="Изменение размера" Grid.Column="7" Grid.Row="1" Style="{DynamicResource HFCButton}">
+            <Image Source="resources/Button/WideOpen.png"/>
+        </Button>
+        <Button Click="CloseApp" ToolTip="Закрыть" Grid.Column="9" Grid.Row="1" Style="{DynamicResource HFCButton}">
+            <Image Source="resources/Button/CloseWind.png"/>
+        </Button>
+    </Grid>
+</Window>
