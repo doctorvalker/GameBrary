@@ -72,8 +72,8 @@ namespace GameBrary
                     SqlCommand GG = new SqlCommand(GNC, Con);
                     GG.Parameters.AddWithValue("@GID", GC);
                     SqlDataReader GNDT = GG.ExecuteReader();
-                    Bu.Width = 300;
-                    Bu.Height = 500;
+                    Bu.Width = 240;
+                    Bu.Height = 400;
                     Bu.Opacity = 0.25;
                     Bu.Background = Brushes.LightGray;
                     Bu.Foreground = null;
