@@ -230,7 +230,6 @@ namespace GameBrary
             Grid.SetColumn(UWR, 10);
             Grid.SetRow(UWR, 12);
             UWR.MouseEnter += new MouseEventHandler(this.ScoreCOpen);
-            UWR.MouseLeave += new MouseEventHandler(this.ScoreCClose);
             GView.Children.Add(UWR);
         }
 
@@ -300,6 +299,13 @@ namespace GameBrary
         private void SPSClose(object sender, MouseEventArgs e)
         {
             SPS.Opacity = 0;
+        }
+
+        private void AllClose(object sender, MouseEventArgs e)
+        {
+            SPS.Opacity = 0;
+            var SC = GView.FindName("SChoice") as StackPanel;
+            if (SC != null) SC.Opacity = 0;
         }
 
         private void MainMOpen(object sender, RoutedEventArgs e)

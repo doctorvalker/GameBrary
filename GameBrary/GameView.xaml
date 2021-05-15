@@ -48,7 +48,7 @@
             <ColumnDefinition Width="35*"/>
             <ColumnDefinition Width="16*"/>
         </Grid.ColumnDefinitions>
-        <Image Source="resources/Backgrounds/BackMain.png" Grid.ColumnSpan="18" Grid.RowSpan="19" MouseEnter="SPSClose"/>
+        <Image Source="resources/Backgrounds/BackMain.png" Grid.ColumnSpan="18" Grid.RowSpan="19" MouseEnter="AllClose"/>
         <Button Click="HideWindow" ToolTip="Свернуть" Grid.Column="12" Grid.Row="1" Style="{DynamicResource HFCButton}">
             <Image Source="resources/Button/HideOpen.png"/>
         </Button>
